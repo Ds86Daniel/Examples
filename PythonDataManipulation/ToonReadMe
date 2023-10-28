@@ -1,0 +1,9 @@
+This Python script uses the Pixabay API to fetch images of sunsets in America, and then applies a cartoon effect to the images using OpenCV. The script first defines a function `cartoonify_image` that takes an image array as input, converts it to grayscale, applies a median filter, detects edges using Laplacian and thresholding, applies bilateral filter multiple times to create a cartoon effect, and finally converts the image back to color and bitwise the mask and image to create the cartoon effect.
+
+The script then defines a function `fetch_and_cartoonify` that takes an output path prefix and number of images as input. The function fetches images of sunsets in America using the Pixabay API, randomly selects `num_images` distinct images from the fetched set, and then for each selected image, fetches the image, converts it to a numpy array for OpenCV, applies the `cartoonify_image` function to create a cartoon effect, and saves the cartoon image with an index (like `cartoonified_image_1.jpg`, `cartoonified_image_2.jpg`, etc.) using the `cv2.imwrite` function.
+
+The script also defines a function `open_image` that takes an output path as input and opens the image using the appropriate system command based on the operating system (Windows, macOS, or Linux).
+
+Finally, the script calls the `fetch_and_cartoonify` function with an output path prefix of `cartoonified_image.jpg` to fetch and cartoonify 7 images of sunsets in America.
+
+Overall, this script provides a simple and effective way to fetch and cartoonify images using the Pixabay API and OpenCV.
