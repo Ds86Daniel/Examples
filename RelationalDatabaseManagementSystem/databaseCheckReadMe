@@ -1,0 +1,10 @@
+The selected code is a Python script that checks the connection to an SQLite database and prints a message indicating whether the database is running smoothly or not. The script imports the `sqlite3` library to connect to the database and the `sleep` function from the `time` library to pause the script for a specified amount of time between checks. The path to the database file is defined as a constant variable `DB_PATH`.
+
+The `check_connection` function attempts to connect to the database using the `sqlite3.connect` method and retrieves the version of SQLite using the `SELECT SQLITE_VERSION()` SQL query. If the connection is successful, the version of SQLite is printed to the console, and the function returns `True`. If an exception occurs during the connection attempt, the error message is printed to the console, and the function returns `False`.
+
+The `main` function is an infinite loop that calls the `check_connection` function every minute using the `sleep` function. If the `check_connection` function returns `True`, the message "Database is running smoothly." is printed to the console. If the `check_connection` function returns `False`, the message "Unable to connect to the database!" is printed to the console.
+
+The `if __name__ == '__main__':` statement at the end of the script ensures that the `main` function is only executed if the script is run directly, rather than being imported as a module.
+
+This script is useful for monitoring the status of an SQLite database and ensuring that it is running smoothly. By running this script in the background, the user can be alerted if there are any issues with the database connection, allowing them to take action to resolve the issue before it causes any problems. 
+
