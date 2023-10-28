@@ -1,0 +1,9 @@
+This Python script downloads elevation data from OpenTopography API for a small area in New Mexico, and then creates a simulated asteroid impact crater on the elevation data. The script uses the `requests` library to download the data, and `rasterio` library to read the downloaded GeoTIFF file. The `numpy` and `matplotlib` libraries are used for data manipulation and visualization, respectively.
+
+The `create_crater` function takes the elevation data, x and y coordinates of the center of the crater, radius of the crater, and maximum depth of the crater as input. It then iterates over each pixel in the elevation data, calculates the distance of the pixel from the center of the crater, and reduces the elevation of the pixel based on the distance from the center of the crater. The function returns the modified elevation data.
+
+The script then plots the original elevation data and the elevation data with the simulated asteroid impact crater using `matplotlib`'s 3D plotting capabilities. The `plot_surface` function is used to plot the elevation data as a surface plot, and the `set_ylim` function is used to invert the Y-axis to match the standard orientation of maps.
+
+If the script fails to download the elevation data, it prints an error message with the HTTP status code and response content.
+
+To improve the readability of the code, the nested loops in the `create_crater` function could be replaced with a vectorized implementation using `numpy`'s broadcasting capabilities.
