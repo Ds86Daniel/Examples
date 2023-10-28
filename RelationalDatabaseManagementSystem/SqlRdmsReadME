@@ -1,0 +1,15 @@
+The selected code is a Python script that manages an SQLite database using various functions such as creating a table, inserting data, displaying data, and deleting data. The script imports the `sqlite3` library to connect to the database and defines the path to the database file as a constant variable `DB_PATH`.
+
+The `check_connection` function attempts to connect to the database using the `sqlite3.connect` method and retrieves the version of SQLite using the `SELECT SQLITE_VERSION()` SQL query. If the connection is successful, the version of SQLite is printed to the console, and the function returns `True`. If an exception occurs during the connection attempt, the error message is printed to the console, and the function returns `False`.
+
+The `create_table` function creates a new table in the database if it does not already exist. The function uses the `CREATE TABLE IF NOT EXISTS` SQL statement to create a table with three columns: `id`, `name`, and `age`. The `id` column is the primary key, and the `name` and `age` columns are defined as `TEXT` and `INTEGER` data types, respectively.
+
+The `insert_data` function prompts the user to enter a name and age and inserts the data into the `sample_table` using the `INSERT INTO` SQL statement. The function uses the `?` placeholder to prevent SQL injection attacks and commits the changes to the database using the `conn.commit()` method.
+
+The `display_data` function retrieves all the rows from the `sample_table` using the `SELECT * FROM sample_table` SQL statement and prints them to the console using a `for` loop.
+
+The `delete_data` function displays all the rows from the `sample_table` using the `display_data` function and prompts the user to enter the `id` of the record they want to delete. The function uses the `DELETE FROM` SQL statement to delete the record with the specified `id` and commits the changes to the database using the `conn.commit()` method.
+
+The `main` function is an infinite loop that displays a menu of options to the user and prompts them to enter a choice. The function calls the appropriate function based on the user's choice and exits the loop if the user chooses to exit.
+
+This script is useful for managing an SQLite database and performing various operations such as creating tables, inserting data, displaying data, and deleting data. By running this script, the user can easily interact with the database and perform various operations without having to write SQL queries manually.
