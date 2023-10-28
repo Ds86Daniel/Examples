@@ -1,0 +1,11 @@
+ This Python script demonstrates how to train a K-Nearest Neighbors (KNN) classifier on the Iris dataset using scikit-learn library. The script first loads the Iris dataset using the `datasets` module from scikit-learn. The dataset contains 150 samples of Iris flowers, with 4 features (sepal length, sepal width, petal length, and petal width) and 3 classes (setosa, versicolor, and virginica).
+
+The script then splits the dataset into training and testing sets using the `train_test_split` function from scikit-learn. The training set contains 70% of the samples, and the testing set contains the remaining 30%. The random state is set to 42 to ensure reproducibility of the results.
+
+Next, the script trains a KNN classifier on the training set using the `KNeighborsClassifier` class from scikit-learn. The `n_neighbors` parameter is set to 3, which means that the classifier will consider the 3 nearest neighbors of a sample to make a prediction.
+
+The script then uses the trained classifier to make predictions on the testing set, and prints a classification report using the `classification_report` function from scikit-learn. The classification report shows the precision, recall, and F1-score for each class, as well as the overall accuracy of the classifier.
+
+Finally, the script creates a confusion matrix using the `confusion_matrix` function from scikit-learn, and visualizes it using the `heatmap` function from the `seaborn` library. The confusion matrix shows the number of true positives, false positives, true negatives, and false negatives for each class. The heatmap uses a blue color map to represent the number of samples in each cell of the matrix.
+
+Overall, this script provides a simple and effective way to train and evaluate a KNN classifier on the Iris dataset. 
