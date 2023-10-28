@@ -1,2 +1,6 @@
 This folder contains programs relative to the title of the folder: DevOps
-You will find two programs that display fundamental knowledge of DevOps: deploy and Menu
+You will find two source files that display fundamental knowledge of DevOps: deploy.py and Menu.py
+These Programs utilize: Kubernetes, Docker, MySQL, and Flask
+These prorgams demonstrate automation within DevOps.
+OS used: Linux 
+IDE: Python on Spyder via Anaconda
