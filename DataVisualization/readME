@@ -1,3 +1,4 @@
 In this folder you will find a programs that produce data visualizations:
 The first program Data_Visualization displays a simple matplotlib graph: (wine sales)
 The second program DataVisualsAirlines displays a few simple matplotlib graphs: (monthly passenger trends)
+NOTE* The datasets for these programs are not mine and are only for educational and demonstrational purposes.
